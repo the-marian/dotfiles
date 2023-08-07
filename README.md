@@ -20,11 +20,11 @@ Aborting
 
 You could backup back up the current configuration with: 
 ```
-mkdir -p .config-backup && config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
+mkdir -p .config-backup && config checkout 2>&1 | egrep "\s+\S*\.\S+" | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
 ```
 
 or just delete all conflicting files
 ```
-config checkout 2>&1 | egrep "\s\S+\.\S+" | awk {'print $1'} | xargs -I {} rm {}
+config checkout 2>&1 | egrep "\s+\S*\.\S+" | awk {'print $1'} | xargs -I {} rm {}
 ```
 and re-run the `config checkout` command
