@@ -8,11 +8,7 @@ export CONFIG_FILE_PATH=deploy/config/localdev/hosting.yaml
 source $HOME/.secrets.sh
 
 ZSH_THEME="robbyrussell"
-plugins=(
-    git
-    zsh-autosuggestions
-    kubectl
-)
+plugins=(git)
 
 fpath=($fpath ~/.zsh/completion)
 
@@ -21,7 +17,6 @@ alias n=nvim
 alias k=kubectl
 alias d=docker
 
-alias ls='lsd'
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
