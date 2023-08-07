@@ -6,9 +6,10 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 echo ".dotfiles" >> .gitignore
 git clone --bare git@github.com:the-marian/dotfiles.git $HOME/.dotfiles
 config checkout
+config config --local status.showUntrackedFiles no
 ```
 
-Last step `config checkout` might fail with a message like:
+The `config checkout` step might fail with a message like:
 ```
 error: The following untracked working tree files would be overwritten by checkout:
     .zshrc
