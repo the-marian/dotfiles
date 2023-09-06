@@ -4,7 +4,7 @@ import:
 live_config_reload: true
 
 shell:
-  program: /bin/zsh
+  program: /opt/homebrew/bin/fish
   args:
     - -l
     - -c
@@ -20,7 +20,7 @@ window:
 
 font:
   normal:
-    family: "JetBrainsMono Nerd Font"
+    family: JetBrainsMono Nerd Font
     style: Light
   size: 12.0
 

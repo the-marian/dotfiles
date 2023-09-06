@@ -7,7 +7,7 @@ M.general = {
     ["<C-l>"] = {"<cmd> TmuxNavigateRight<CR>", "window right"},
     ["<C-j>"] = {"<cmd> TmuxNavigateDown<CR>", "window down"},
     ["<C-k>"] = {"<cmd> TmuxNavigateLeft<CR>", "window up"},
-  }
+  },
 }
 
 M.lazygit = {
@@ -30,6 +30,39 @@ M.gopher = {
     ["<leader>gsy"] = {
       "<cmd> GoTagAdd yaml <CR>",
       "Add yaml struct tags"
+    },
+  }
+}
+
+M.copilot = {
+  i = {
+    ["<C-l>"] = {
+      function()
+        vim.fn.feedkeys(vim.fn['copilot#Accept'](), '')
+      end,
+      "Copilot Accept",
+      {replace_keycodes = true, nowait=true, silent=true, expr=true, noremap=true}
+    },
+    ["<C-h>"] = {
+      function()
+        vim.fn.feedkeys(vim.fn['copilot#Dismiss'](), '')
+      end,
+      "Copilot Dismiss",
+      {replace_keycodes = true, nowait=true, silent=true, expr=true, noremap=true}
+    },
+    ["<C-j>"] = {
+      function()
+        vim.fn.feedkeys(vim.fn['copilot#Next'](), '')
+      end,
+      "Copilot Next",
+      {replace_keycodes = true, nowait=true, silent=true, expr=true, noremap=true}
+    },
+    ["<C-k>"] = {
+      function()
+        vim.fn.feedkeys(vim.fn['copilot#Previous'](), '')
+      end,
+      "Copilot Previous",
+      {replace_keycodes = true, nowait=true, silent=true, expr=true, noremap=true}
     },
   }
 }

@@ -1,4 +1,8 @@
 local plugins = {
+ {
+    "github/copilot.vim",
+    lazy = false,
+  },
   {
     "christoomey/vim-tmux-navigator",
     lazy=false,
@@ -7,6 +11,20 @@ local plugins = {
   {
     "NvChad/nvterm",
     enabled = false,
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = {
+      mapping = {
+        -- disable  tab
+        ["<Tab>"] = function(callback)
+          callback()
+        end,
+        ["<S-Tab>"] = function(callback)
+          callback()
+        end,
+     }
+    }
   },
   {
     "neovim/nvim-lspconfig",
