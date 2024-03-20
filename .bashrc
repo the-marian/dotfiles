@@ -2,7 +2,7 @@
 eval "$(starship init bash)"
 
 # Initialize zoxide
-eval "$(zoxide init bash)"
+eval "$(zoxide init --cmd cd bash)"
 
 set -o vi
 
