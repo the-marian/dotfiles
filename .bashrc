@@ -23,6 +23,8 @@ export PATH="$GOPATH/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/share/google/google-cloud-sdk/bin/:$PATH"
 
+export EDITOR="nvim"
+
 # Source secrets file
 source "$HOME/.secrets.sh"
 
@@ -59,5 +61,5 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Update PATH for the Google Cloud SDK
 if [ -f '/Users/ultron/google-cloud-sdk/path.bash.inc' ]; then
-  . '/Users/ultron/google-cloud-sdk/path.bash.inc'
+	. '/Users/ultron/google-cloud-sdk/path.bash.inc'
 fi
