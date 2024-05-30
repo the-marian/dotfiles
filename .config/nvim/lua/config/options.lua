@@ -7,4 +7,4 @@ local opt = vim.opt
 opt.relativenumber = false
 opt.wrap = true
 
-vim.g.autoformat = false
+vim.g.autoformat = true
