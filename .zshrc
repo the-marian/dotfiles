@@ -49,15 +49,10 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Add in zsh plugins
-zi ice wait lucid for zsh-users/zsh-syntax-highlighting
-zi ice wait for zsh-users/zsh-autosuggestions
-zi ice wait for Aloxaf/fzf-tab
-zi for \
-    atload"zicompinit; zicdreplay" \
-    blockf \
-    lucid \
-    wait \
-  zsh-users/zsh-completions
+zinit lucid wait for zsh-users/zsh-syntax-highlighting
+zinit lucid wait for zsh-users/zsh-autosuggestions
+zinit lucid wait for Aloxaf/fzf-tab
+zinit lucid wait for zsh-users/zsh-completions
 
 # Load completions
 autoload -Uz compinit && compinit
