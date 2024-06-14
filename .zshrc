@@ -11,7 +11,6 @@ export EDITOR="nvim"
 # Add paths to the PATH environment variable
 export PATH="$GOPATH/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/usr/local/share/google/google-cloud-sdk/bin/:$PATH"
 
 # Set the directory we want to store zinit and plugins
 export ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -31,6 +30,8 @@ alias n='nvim'
 alias el='n ~/.config/nvim'
 
 alias ez='n ~/.zshrc'
+
+alias k='kubectl'
 
 alias sz='source ~/.zshrc'
 
